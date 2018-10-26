@@ -1,4 +1,7 @@
 resource "random_pet" "pet" {
+  keepers = {
+    seed = "${var.seed_input}"
+  }
   count = 1
 }
 
